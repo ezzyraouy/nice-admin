@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class DatetimeLocal extends Component
+class ImageUpload extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class DatetimeLocal extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin.ui.inputs.datetime-local');
+        return view('components.admin.ui.inputs.image-upload');
     }
 }

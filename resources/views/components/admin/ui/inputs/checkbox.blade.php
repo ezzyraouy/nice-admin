@@ -1,11 +1,13 @@
-@props(['id', 'name', 'label' => null, 'checked' => false, 'required' => false])
+@props(['id', 'name', 'label' => '', 'value' => 1, 'checked' => false])
 
-<div class="form-check mb-4">
-    <input class="form-check-input @error($name) is-invalid @enderror" type="checkbox" id="{{ $id }}" name="{{ $name }}" {{ $checked ? 'checked' : '' }} {{ $required ? 'required' : '' }}>
-    @if ($label)
-        <label class="form-check-label" for="{{ $id }}">{{ $label }}</label>
-    @endif
+<div class="form-check mb-3">
+    <input type="checkbox" class="form-check-input @error($name) is-invalid @enderror" id="{{ $id }}"
+        name="{{ $name }}" value="{{ $value }}" {{ old($name, $checked) ? 'checked' : '' }}>
+    <label class="form-check-label" for="{{ $id }}">
+        {{ $label }}
+    </label>
+
     @error($name)
-        <span class="error invalid-feedback d-block">{{ $message }}</span>
+        <span class="invalid-feedback d-block">{{ $message }}</span>
     @enderror
 </div>

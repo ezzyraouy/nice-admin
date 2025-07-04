@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Date extends Component
+class Tinymce extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class Date extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin.ui.inputs.date');
+        return view('components.admin.ui.inputs.tinymce');
     }
 }

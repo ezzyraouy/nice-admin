@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Number extends Component
+class FileMultiple extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class Number extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin.ui.inputs.number');
+        return view('components.admin.ui.inputs.file-multiple');
     }
 }
